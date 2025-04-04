@@ -345,7 +345,6 @@ PRODUCT_COPY_FILES += \
     vendor/sony/akari/proprietary/vendor/lib/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl-qti \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.keymaster@3.0-impl-qti \
     vendor.qti.gnss@3.0-impl \

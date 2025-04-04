@@ -4,61 +4,9 @@
 
 soong_namespace {
     imports: [
+        "vendor/qcom/opensource/display",
         "vendor/sony/tama-common",
     ],
-}
-
-cc_prebuilt_library_shared {
-    name: "android.hardware.keymaster@3.0-impl-qti",
-    owner: "sony",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/android.hardware.keymaster@3.0-impl-qti.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcrypto",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "libutils",
-                "libcutils",
-                "libkeymasterdeviceutils",
-                "android.hardware.keymaster@3.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/android.hardware.keymaster@3.0-impl-qti.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcrypto",
-                "libhidlbase",
-                "libhidltransport",
-                "libhwbinder",
-                "libutils",
-                "libcutils",
-                "libkeymasterdeviceutils",
-                "android.hardware.keymaster@3.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "both",
-    prefer: true,
-    soc_specific: true,
 }
 
 cc_prebuilt_library_shared {
@@ -880,6 +828,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "both",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
