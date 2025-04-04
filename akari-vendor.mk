@@ -353,7 +353,6 @@ PRODUCT_PACKAGES += \
     libcammw_util \
     libdataitems \
     libexcal_core \
-    libkeymasterutils \
     liblbs_core \
     libloc_api_v02 \
     liblocationservice \
